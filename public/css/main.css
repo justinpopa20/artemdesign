@@ -20,6 +20,10 @@ ol {
     src: url("http://artemdesign.com/CliveBarker.ttf");
 }
 
+img.page-bg {
+    position: fixed;
+}
+
 
 /*MENU*/
 
