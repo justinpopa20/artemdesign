@@ -1,0 +1,16 @@
+{
+    "name": "artemdesign",
+    "description": "Uniquely arting the world",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/justinpopa20/artemdesign.git"
+    },
+    "version": "1.0.0",
+    "dependencies": {
+        "body-parser": "~1.4.2",
+        "bower": "^1.4.1",
+        "express": "~4.5.1",
+        "http-status-code": "^1.0.5",
+        "method-override": "~2.0.2"
+    }
+}
