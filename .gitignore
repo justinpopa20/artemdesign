@@ -8,3 +8,4 @@ lib-cov
 *.gz
 
 bower_components
+node_modules
