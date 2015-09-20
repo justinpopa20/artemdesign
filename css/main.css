@@ -87,11 +87,25 @@ footer.navmenu .cartoon {
     z-index: 3;
 }
 
+footer.navmenu .list .menu {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+}
+
 footer.navmenu .menu {
     bottom: 0;
     right: 10px;
     z-index: 4;
     position: absolute;
+}
+
+
+/* hide menu button when footer is expanded*/
+
+footer.navmenu.animating > .menu,
+footer.navmenu.active > .menu {
+    display: none;
 }
 
 footer.navmenu .list {
@@ -143,7 +157,6 @@ footer.navmenu .list > li:active {
     background-image: url("../img/menu/menu_pink.png");
     background-repeat: no-repeat;
     background-position: center;
-    /*background-size: 70% 100%;*/
 }
 
 footer.navmenu .list li:active a {
