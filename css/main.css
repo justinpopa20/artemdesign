@@ -1,0 +1,205 @@
+a {
+    color: black;
+}
+
+a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+
+/*Fonts*/
+
+@font-face {
+    font-family: CliveBarker;
+    src: url("http://artemdesign.com/CliveBarker.ttf");
+}
+
+
+/*MENU*/
+
+body {
+    background-color: rgba(0, 0, 0, 0.37);
+    margin: 0;
+}
+
+footer.navmenu {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-image: url("../img/menu/bg_big.png");
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+}
+
+footer.navmenu .logo {
+    position: absolute;
+    height: 244px;
+    width: 220px;
+    bottom: 0;
+    z-index: 3;
+    background-image: url("../img/menu/logo_big.png");
+}
+
+footer.navmenu .logo a {
+    height: 220px;
+    margin-top: 20px;
+    display: block;
+}
+
+footer.navmenu .description {
+    margin-left: 230px;
+    margin-right: 330px;
+    height: 240px;
+    font-family: CliveBarker;
+    line-height: 300px;
+    text-align: center;
+    font-size: 64px;
+    position: relative;
+}
+
+footer.navmenu .description .previous,
+footer.navmenu .description .next {
+    position: absolute;
+    margin: auto 0;
+    top: 50px;
+    bottom: 0;
+    cursor: pointer;
+}
+
+footer.navmenu .description .previous {
+    left: 0;
+}
+
+footer.navmenu .description .next {
+    right: 0;
+}
+
+footer.navmenu .cartoon {
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+    z-index: 3;
+}
+
+footer.navmenu .menu {
+    bottom: 0;
+    right: 10px;
+    z-index: 4;
+    position: absolute;
+}
+
+footer.navmenu .list {
+    z-index: 1;
+    list-style: none;
+    font-family: CliveBarker;
+    font-size: 54px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url("../img/menu/bg_full.png");
+    margin: 0;
+    padding: 0;
+    padding-top: 65px;
+    text-align: center;
+}
+
+footer.navmenu .list > li {
+    margin: 0 auto;
+    line-height: 130px;
+    height: 110px;
+}
+
+footer.navmenu .list li:hover:before {
+    content: url("../img/menu/dot-left.png");
+    margin-right: 40px;
+    position: relative;
+}
+
+footer.navmenu .list li:hover:after {
+    content: url("../img/menu/dot-right.png");
+    margin-left: 40px;
+    position: relative;
+}
+
+footer.navmenu .list > li:active:before {
+    content: url("../img/menu/dot-white-left.png");
+    margin-left: 20px;
+    position: relative;
+}
+
+footer.navmenu .list > li:active:after {
+    content: url("../img/menu/dot-white-right.png");
+    margin-right: 20px;
+    position: relative;
+}
+
+footer.navmenu .list > li:active {
+    background-image: url("../img/menu/menu_pink.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    /*background-size: 70% 100%;*/
+}
+
+footer.navmenu .list li:active a {
+    color: white;
+}
+
+footer.navmenu .list li img {
+    content: url("../img/menu/down.png");
+}
+
+footer.navmenu .list .submenu {
+    position: absolute;
+    margin: 0 auto;
+    width: 100%;
+    height: 500px;
+    left: 0;
+    right: 0;
+    padding: 10px 0 0 0;
+    background-image: url("../img/menu/submenu.png");
+    background-repeat: no-repeat;
+    background-position: center 0;
+}
+
+footer.navmenu .list .submenu li {
+    font-size: 30px;
+    color: #fff;
+    height: 75px;
+    line-height: 75px;
+    cursor: pointer;
+}
+
+footer.navmenu .list .submenu li:hover:before {
+    content: url("../img/menu/dot-white-left.png");
+    margin-left: -70px;
+    position: absolute;
+}
+
+footer.navmenu .list .submenu li:hover:after {
+    content: url("../img/menu/dot-white-right.png");
+    margin-right: 20px;
+    position: absolute;
+}
+
+footer.navmenu .list li img.expanded {
+    content: url("../img/menu/up.png");
+}
+
+footer.navmenu .list li img {
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+footer.navmenu .list li:active img {
+    content: url("../img/menu/down-white.png");
+}
+
+footer.navmenu .list li:active img.expanded {
+    content: url("../img/menu/up-white.png");
+}
