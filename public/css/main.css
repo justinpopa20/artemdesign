@@ -12,6 +12,11 @@ ol {
     list-style: none;
 }
 
+body {
+    background-color: rgba(0, 0, 0, 0.37);
+    margin: 0;
+}
+
 
 /* PAGES BG*/
 
@@ -28,15 +33,19 @@ ol {
 }
 
 img.page-bg {
+    min-height: 100%;
     position: fixed;
 }
 
 
 /*MENU*/
 
-body {
-    background-color: rgba(0, 0, 0, 0.37);
-    margin: 0;
+.nav-button {
+    content: url("../img/menu/button.png");
+}
+
+.nav-button-active {
+    content: url("../img/menu/button_active.png");
 }
 
 footer.navmenu {
@@ -51,11 +60,9 @@ footer.navmenu {
 
 footer.navmenu .logo {
     position: absolute;
-    height: 244px;
-    width: 220px;
     bottom: 0;
     z-index: 3;
-    background-image: url("../img/menu/logo_big.png");
+    content: url("../img/menu/logo_big.png");
 }
 
 footer.navmenu .logo a {
@@ -100,6 +107,7 @@ footer.navmenu .cartoon {
     bottom: 0;
     right: 10px;
     z-index: 3;
+    content: url("../img/menu/cartoon.png");
 }
 
 footer.navmenu .list .menu {
@@ -233,6 +241,21 @@ footer.navmenu .list li:active img.expanded {
 }
 
 @media screen and (max-width: 480px) {
+    /*MENU*/
+    footer.navmenu .logo {
+        content: url("../img/menu/logo_mobile.png");
+    }
+    .nav-button {
+        content: url("../img/menu/button_mobile.png");
+    }
+    footer.navmenu {
+        height: 110px;
+        background-image: url("../img/menu/bg_pattern_mobile.png");
+    }
+    footer.navmenu .cartoon {
+        right: 35px;
+        content: url("../img/menu/cartoon_mobile.png");
+    }
     .description {
         top: 0;
         left: 0;
