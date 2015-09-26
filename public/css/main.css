@@ -13,6 +13,13 @@ ol {
 }
 
 
+/* PAGES BG*/
+
+.home {
+    content: url("../img/pages/home/home.jpg");
+}
+
+
 /*Fonts*/
 
 @font-face {
@@ -35,6 +42,7 @@ body {
 footer.navmenu {
     position: fixed;
     bottom: 0;
+    height: 240px;
     width: 100%;
     background-image: url("../img/menu/bg_big.png");
     background-repeat: no-repeat;
@@ -56,19 +64,22 @@ footer.navmenu .logo a {
     display: block;
 }
 
-footer.navmenu .description {
-    margin-left: 230px;
-    margin-right: 330px;
+.description {
+    left: 230px;
+    right: 330px;
+    margin: 0 auto;
     height: 240px;
     font-family: CliveBarker;
     line-height: 300px;
     text-align: center;
     font-size: 64px;
-    position: relative;
+    position: fixed;
+    bottom: 0;
+    z-index: 5;
 }
 
-footer.navmenu .description .previous,
-footer.navmenu .description .next {
+.description .previous,
+.description .next {
     position: absolute;
     margin: auto 0;
     top: 50px;
@@ -76,11 +87,11 @@ footer.navmenu .description .next {
     cursor: pointer;
 }
 
-footer.navmenu .description .previous {
+.description .previous {
     left: 0;
 }
 
-footer.navmenu .description .next {
+.description .next {
     right: 0;
 }
 
@@ -219,4 +230,22 @@ footer.navmenu .list li:active img {
 
 footer.navmenu .list li:active img.expanded {
     content: url("../img/menu/up-white.png");
+}
+
+@media screen and (max-width: 480px) {
+    .description {
+        top: 0;
+        left: 0;
+        right: 0;
+        font-size: 22px;
+        height: 100px;
+        line-height: 100px;
+    }
+    .description .previous,
+    .description .next {
+        top: 0;
+    }
+    .home {
+        content: url("../img/pages/home/home_phone.jpg");
+    }
 }
