@@ -82,7 +82,7 @@ footer.navmenu .logo a {
     font-size: 64px;
     position: fixed;
     bottom: 0;
-    z-index: 5;
+    z-index: 2;
 }
 
 .description .previous,
@@ -242,11 +242,22 @@ footer.navmenu .list li:active img.expanded {
 
 @media screen and (max-width: 480px) {
     /*MENU*/
+    footer.navmenu .list > li {
+        line-height: 35px;
+        height: 40px;
+        font-size: 20px;
+    }
+    footer.navmenu .list li img {
+        height: 16px;
+    }
     footer.navmenu .logo {
         content: url("../img/menu/logo_mobile.png");
     }
     .nav-button {
         content: url("../img/menu/button_mobile.png");
+    }
+    .nav-button-active {
+        content: url("../img/menu/button_active_mobile.png");
     }
     footer.navmenu {
         height: 110px;
@@ -264,6 +275,7 @@ footer.navmenu .list li:active img.expanded {
         font-size: 22px;
         height: 60px;
         line-height: 100px;
+        z-index: 0;
     }
     .description .content {
         padding: 0 20px;

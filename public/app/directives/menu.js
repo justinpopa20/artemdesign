@@ -7,7 +7,11 @@ angular.module("artemdesign").directive("footermenu", function() {
                 var footer = $("footer");
                 var newHeight = $(window).height();
                 if (footer.hasClass("active")) {
-                    newHeight = 244;
+                    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                        newHeight = 110;
+                    } else {
+                        newHeight = 244;
+                    }
                 }
 
                 var list = footer.find(".list");
