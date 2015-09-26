@@ -12,5 +12,8 @@
         "express": "~4.5.1",
         "http-status-code": "^1.0.5",
         "method-override": "~2.0.2"
+    },
+    "scripts": {
+        "postinstall": "bower install"
     }
 }

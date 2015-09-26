@@ -24,6 +24,10 @@ app.get('/', function(req, res) {
     res.sendfile(path.join(__dirname, 'public/index.html'));
 });
 
+app.use(function(req, res) {
+    res.sendfile(path.join(__dirname, 'public/index.html'));
+});
+
 // start app ===============================================
 app.listen(port);
 console.log('Magic happens on port ' + port); // shoutout to the user
