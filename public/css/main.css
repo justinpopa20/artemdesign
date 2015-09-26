@@ -251,6 +251,7 @@ footer.navmenu .list li:active img.expanded {
     footer.navmenu {
         height: 110px;
         background-image: url("../img/menu/bg_pattern_mobile.png");
+        background-size: cover;
     }
     footer.navmenu .cartoon {
         right: 35px;
@@ -258,15 +259,21 @@ footer.navmenu .list li:active img.expanded {
     }
     .description {
         top: 0;
-        left: 0;
-        right: 0;
+        left: 10px;
+        right: 10px;
         font-size: 22px;
-        height: 100px;
+        height: 60px;
         line-height: 100px;
+    }
+    .description .content {
+        padding: 0 20px;
+        line-height: 30px;
+        margin-top: 10px;
     }
     .description .previous,
     .description .next {
         top: 0;
+        height: 20px;
     }
     .home {
         content: url("../img/pages/home/home_phone.jpg");
