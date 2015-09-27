@@ -152,7 +152,8 @@ footer.navmenu .list > li {
     height: 110px;
 }
 
-footer.navmenu .list li:hover:before {
+
+/* footer.navmenu .list li:hover:before {
     content: url("../img/menu/dot-left.png");
     margin-right: 40px;
     position: relative;
@@ -162,27 +163,27 @@ footer.navmenu .list li:hover:after {
     content: url("../img/menu/dot-right.png");
     margin-left: 40px;
     position: relative;
-}
+} */
 
-footer.navmenu .list > li:active:before {
+footer.navmenu .list > li:hover:before {
     content: url("../img/menu/dot-white-left.png");
     margin-left: 20px;
     position: relative;
 }
 
-footer.navmenu .list > li:active:after {
+footer.navmenu .list > li:hover:after {
     content: url("../img/menu/dot-white-right.png");
     margin-right: 20px;
     position: relative;
 }
 
-footer.navmenu .list > li:active {
+footer.navmenu .list > li:hover {
     background-image: url("../img/menu/menu_pink.png");
     background-repeat: no-repeat;
     background-position: center;
 }
 
-footer.navmenu .list li:active a {
+footer.navmenu .list li:hover a {
     color: white;
 }
 
@@ -232,11 +233,11 @@ footer.navmenu .list li img {
     margin-left: 10px;
 }
 
-footer.navmenu .list li:active img {
+footer.navmenu .list li:hover img {
     content: url("../img/menu/down-white.png");
 }
 
-footer.navmenu .list li:active img.expanded {
+footer.navmenu .list li:hover img.expanded {
     content: url("../img/menu/up-white.png");
 }
 
@@ -250,8 +251,27 @@ footer.navmenu .list li:active img.expanded {
     footer.navmenu .list li img {
         height: 16px;
     }
+    footer.navmenu .list .submenu {
+        background-image: url("../img/menu/submenu_selected_mobile.png");
+        height: 170px;
+        padding: 20px 0 0 0;
+    }
+    footer.navmenu .list .submenu li {
+        height: 35px;
+        line-height: 20px;
+        font-size: 16px;
+    }
+    footer.navmenu .list > li:before {
+        content: url("../img/menu/dot-left_mobile.png");
+    }
+    footer.navmenu .list > li:active:before {}
+    footer.navmenu .list > li:after {}
+    footer.navmenu .list > li:active:after {}
     footer.navmenu .logo {
         content: url("../img/menu/logo_mobile.png");
+    }
+    .menu {
+        height: 55px;
     }
     .nav-button {
         content: url("../img/menu/button_mobile.png");
