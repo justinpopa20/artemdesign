@@ -3,7 +3,7 @@ angular.module("artemdesign").directive("footermenu", function() {
         templateUrl: 'app/directives/menu.tmpl.html',
         link: function(scope, element) {
             //animate menu display
-            $("footer .menu").on("mousedown", function(event) {
+            $("footer .nav-button").on("mousedown", function(event) {
                 var footer = $("footer");
                 var newHeight = $(window).height();
                 if (footer.hasClass("active")) {
@@ -31,8 +31,10 @@ angular.module("artemdesign").directive("footermenu", function() {
                             list.addClass("hidden");
                             footer.removeClass("active");
                             description.removeClass("hidden");
+                            footer.height("23%");
                         } else {
                             footer.addClass("active");
+                            footer.height("100%");
                         }
                     });
             });

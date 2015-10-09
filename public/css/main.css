@@ -1,8 +1,6 @@
-a {
-    color: black;
-}
-
-a:hover {
+a,
+a:hover,
+a:focus {
     color: black;
     text-decoration: none;
 }
@@ -12,16 +10,39 @@ ol {
     list-style: none;
 }
 
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
 body {
     background-color: rgba(0, 0, 0, 0.37);
     margin: 0;
+    font-size: 10px;
 }
 
 
 /* PAGES BG*/
 
-.home {
-    content: url("../img/pages/home/home.jpg");
+.page-bg {
+    display: block;
+}
+
+.page-bg-mobile {
+    display: none;
+}
+
+img.page-bg {
+    height: 100%;
+    min-width: 1500px;
+    width: 100%;
+}
+
+img.page-bg-mobile {
+    height: 100%;
+    width: 100%;
+    min-width: 450px;
 }
 
 
@@ -32,37 +53,34 @@ body {
     src: url("http://artemdesign.com/CliveBarker.ttf");
 }
 
-img.page-bg {
-    min-height: 100%;
-    position: fixed;
-}
-
 
 /*MENU*/
-
-.nav-button {
-    content: url("../img/menu/button.png");
-}
-
-.nav-button-active {
-    content: url("../img/menu/button_active.png");
-}
 
 footer.navmenu {
     position: fixed;
     bottom: 0;
-    height: 240px;
+    left: 0;
+    height: 23%;
     width: 100%;
-    background-image: url("../img/menu/bg_big.png");
+    background-image: url("../img/menu/whitebg.png");
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: 0 100%;
 }
 
 footer.navmenu .logo {
+    position: fixed;
+    bottom: 0;
+    height: 22%;
+    z-index: 3;
+    display: block;
+}
+
+footer.navmenu .logo-mobile {
     position: absolute;
     bottom: 0;
     z-index: 3;
-    content: url("../img/menu/logo_big.png");
+    display: none;
 }
 
 footer.navmenu .logo a {
@@ -71,15 +89,54 @@ footer.navmenu .logo a {
     display: block;
 }
 
+footer.navmenu .cartoon {
+    position: fixed;
+    bottom: 0;
+    height: 50%;
+    right: 10px;
+    z-index: 3;
+    display: block;
+}
+
+.cartoon-mobile {
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+    z-index: 3;
+    display: none;
+}
+
+.nav-button {
+    bottom: 0;
+    right: 10px;
+    z-index: 4;
+    height: 10%;
+    position: fixed;
+}
+
+.nav-button.active {
+    top: 20px;
+    right: 10px;
+    z-index: 4;
+    height: 10%;
+    position: absolute;
+}
+
+.nav-button.mobile,
+.nav-button.active.mobile {
+    height: auto;
+    display: none;
+}
+
 .description {
     left: 230px;
     right: 330px;
     margin: 0 auto;
-    height: 240px;
+    height: 23%;
     font-family: CliveBarker;
-    line-height: 300px;
+    line-height: 5em;
     text-align: center;
-    font-size: 64px;
+    font-size: 5em;
     position: fixed;
     bottom: 0;
     z-index: 2;
@@ -102,32 +159,17 @@ footer.navmenu .logo a {
     right: 0;
 }
 
-footer.navmenu .cartoon {
-    position: fixed;
-    bottom: 0;
-    right: 10px;
-    z-index: 3;
-    content: url("../img/menu/cartoon.png");
-}
-
 footer.navmenu .list .menu {
     position: absolute;
     right: 15px;
     top: 20px;
 }
 
-footer.navmenu .menu {
-    bottom: 0;
-    right: 10px;
-    z-index: 4;
-    position: absolute;
-}
-
 
 /* hide menu button when footer is expanded*/
 
-footer.navmenu.animating > .menu,
-footer.navmenu.active > .menu {
+footer.navmenu.animating > .nav-button,
+footer.navmenu.active > .nav-button {
     display: none;
 }
 
@@ -135,7 +177,7 @@ footer.navmenu .list {
     z-index: 1;
     list-style: none;
     font-family: CliveBarker;
-    font-size: 54px;
+    font-size: 5em;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -147,9 +189,9 @@ footer.navmenu .list {
 }
 
 footer.navmenu .list > li {
-    margin: 0 auto;
-    line-height: 130px;
-    height: 110px;
+    height: 10%;
+    width: 100%;
+    display: inline-block;
 }
 
 
@@ -180,6 +222,7 @@ footer.navmenu .list > li:hover:after {
 footer.navmenu .list > li:hover {
     background-image: url("../img/menu/menu_pink.png");
     background-repeat: no-repeat;
+    background-size: 70% 100%;
     background-position: center;
 }
 
@@ -241,6 +284,23 @@ footer.navmenu .list li:hover img.expanded {
     content: url("../img/menu/up-white.png");
 }
 
+@media screen and (max-height: 800px),
+screen and (max-width: 1120px) {
+    body {
+        font-size: 8px;
+    }
+    footer.navmenu .cartoon {
+        height: 40%;
+    }
+}
+
+@media screen and (max-height: 560px),
+screen and (max-width: 720px) {
+    body {
+        font-size: 6px;
+    }
+}
+
 @media screen and (max-width: 480px) {
     /*MENU*/
     footer.navmenu .list > li {
@@ -261,12 +321,12 @@ footer.navmenu .list li:hover img.expanded {
         line-height: 20px;
         font-size: 16px;
     }
-    footer.navmenu .list > li:before {
+    footer.navmenu .list > li:active:before {
         content: url("../img/menu/dot-left_mobile.png");
     }
-    footer.navmenu .list > li:active:before {}
-    footer.navmenu .list > li:after {}
-    footer.navmenu .list > li:active:after {}
+    footer.navmenu .list > li:active:after {
+        content: url("../img/menu/dot-right_mobile.png");
+    }
     footer.navmenu .logo {
         content: url("../img/menu/logo_mobile.png");
     }
@@ -274,10 +334,10 @@ footer.navmenu .list li:hover img.expanded {
         height: 55px;
     }
     .nav-button {
-        content: url("../img/menu/button_mobile.png");
+        display: none;
     }
-    .nav-button-active {
-        content: url("../img/menu/button_active_mobile.png");
+    .nav-button.mobile {
+        display: block;
     }
     footer.navmenu {
         height: 110px;
@@ -285,8 +345,16 @@ footer.navmenu .list li:hover img.expanded {
         background-size: cover;
     }
     footer.navmenu .cartoon {
-        right: 35px;
-        content: url("../img/menu/cartoon_mobile.png");
+        display: none;
+    }
+    footer.navmenu .cartoon-mobile {
+        display: block;
+    }
+    footer.navmenu .logo {
+        display: none;
+    }
+    footer.navmenu .logo-mobile {
+        display: block;
     }
     .description {
         top: 0;
@@ -307,7 +375,10 @@ footer.navmenu .list li:hover img.expanded {
         top: 0;
         height: 20px;
     }
-    .home {
-        content: url("../img/pages/home/home_phone.jpg");
+    .page-bg {
+        display: none;
+    }
+    .page-bg-mobile {
+        display: block;
     }
 }
