@@ -92,7 +92,7 @@ footer.navmenu .logo a {
 footer.navmenu .cartoon {
     position: fixed;
     bottom: 0;
-    height: 50%;
+    height: 40%;
     right: 10px;
     z-index: 3;
     display: block;
@@ -288,9 +288,6 @@ footer.navmenu .list li:hover img.expanded {
 screen and (max-width: 1120px) {
     body {
         font-size: 8px;
-    }
-    footer.navmenu .cartoon {
-        height: 40%;
     }
 }
 
