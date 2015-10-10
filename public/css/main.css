@@ -200,7 +200,20 @@ footer.navmenu .list > li {
     display: inline-block;
 }
 
+footer.navmenu .list li:hover:before {
+    content: url("../img/menu/dot-left.png");
+    margin-right: 5%;
+    position: relative;
+}
+
+footer.navmenu .list li:hover:after {
+    content: url("../img/menu/dot-right.png");
+    margin-left: 5%;
+    position: relative;
+}
+
 footer.navmenu .list li:active:before,
+footer.navmenu .list .submenu li:hover:before,
 footer.navmenu .list li.expanded:before {
     content: url("../img/menu/dot-white-left.png");
     margin-right: 5%;
@@ -208,6 +221,7 @@ footer.navmenu .list li.expanded:before {
 }
 
 footer.navmenu .list li:active:after,
+footer.navmenu .list .submenu li:hover:after,
 footer.navmenu .list li.expanded:after {
     content: url("../img/menu/dot-white-right.png");
     margin-left: 5%;
@@ -218,7 +232,7 @@ footer.navmenu .list > li:active,
 footer.navmenu .list li.expanded {
     background-image: url("../img/menu/menu_pink.png");
     background-repeat: no-repeat;
-    background-size: 70% 115%;
+    background-size: 70% 130%;
     background-position: center;
 }
 
@@ -292,7 +306,6 @@ footer.navmenu .list .submenu {
     background-repeat: no-repeat;
     background-size: 70% 100%;
     background-position: center 0;
-    margin-top: -5px;
 }
 
 footer.navmenu .list .submenu li {
