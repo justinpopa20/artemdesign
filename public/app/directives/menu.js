@@ -40,11 +40,10 @@ angular.module("artemdesign").directive("footermenu", function() {
             });
 
             //open submenu
-            $(".subMenuToggle").on("mousedown", function(event) {
+            $(".subMenuToggle a").on("mousedown", function(event) {
                 var footer = $("footer");
                 footer.find("ul.list .submenu").toggleClass("hidden");
                 $(".subMenuToggle").toggleClass("expanded");
-                $("li.collapsible").toggleClass("expanded");
             });
         }
     }
