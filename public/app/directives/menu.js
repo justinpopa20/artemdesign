@@ -44,6 +44,7 @@ angular.module("artemdesign").directive("footermenu", function() {
                 var footer = $("footer");
                 footer.find("ul.list .submenu").toggleClass("hidden");
                 $(".subMenuToggle").toggleClass("expanded");
+                $("li.collapsible").toggleClass("expanded");
             });
         }
     }

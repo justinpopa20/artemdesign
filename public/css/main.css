@@ -1,8 +1,8 @@
 a,
 a:hover,
 a:focus {
-    color: black;
     text-decoration: none;
+    color: black;
 }
 
 ul,
@@ -68,6 +68,10 @@ footer.navmenu {
     background-position: 0 100%;
 }
 
+footer.navmenu.active {
+    z-index: 3;
+}
+
 footer.navmenu .logo {
     position: fixed;
     bottom: 0;
@@ -129,12 +133,12 @@ footer.navmenu .cartoon {
 }
 
 .description {
-    left: 230px;
-    right: 330px;
+    left: 13%;
+    right: 15%;
     margin: 0 auto;
     height: 23%;
     font-family: CliveBarker;
-    line-height: 5em;
+    line-height: 30vh;
     text-align: center;
     font-size: 5em;
     position: fixed;
@@ -146,7 +150,8 @@ footer.navmenu .cartoon {
 .description .next {
     position: absolute;
     margin: auto 0;
-    top: 50px;
+    top: 20%;
+    height: 23%;
     bottom: 0;
     cursor: pointer;
 }
@@ -189,73 +194,136 @@ footer.navmenu .list {
 }
 
 footer.navmenu .list > li {
-    height: 10%;
+    height: 2.4em;
+    line-height: 2em;
     width: 100%;
     display: inline-block;
 }
 
 
 /* footer.navmenu .list li:hover:before {
-    content: url("../img/menu/dot-left.png");
-    margin-right: 40px;
-    position: relative;
+content: url("../img/menu/dot-left.png");
+margin-right: 40px;
+position: relative;
 }
 
 footer.navmenu .list li:hover:after {
-    content: url("../img/menu/dot-right.png");
-    margin-left: 40px;
-    position: relative;
+content: url("../img/menu/dot-right.png");
+margin-left: 40px;
+position: relative;
 } */
 
-footer.navmenu .list > li:hover:before {
+footer.navmenu .list li:hover:before,
+footer.navmenu .list li.expanded:before {
     content: url("../img/menu/dot-white-left.png");
-    margin-left: 20px;
+    margin-right: 5%;
     position: relative;
 }
 
-footer.navmenu .list > li:hover:after {
+footer.navmenu .list li:hover:after,
+footer.navmenu .list li.expanded:after {
     content: url("../img/menu/dot-white-right.png");
-    margin-right: 20px;
+    margin-left: 5%;
     position: relative;
 }
 
-footer.navmenu .list > li:hover {
+footer.navmenu .list > li:hover,
+footer.navmenu .list li.expanded {
     background-image: url("../img/menu/menu_pink.png");
     background-repeat: no-repeat;
-    background-size: 70% 100%;
+    background-size: 70% 130%;
     background-position: center;
 }
 
-footer.navmenu .list li:hover a {
+footer.navmenu .list li:hover a,
+footer.navmenu .list li.expanded a {
     color: white;
 }
 
 footer.navmenu .list li img {
+    height: 0.7em;
     content: url("../img/menu/down.png");
+}
+
+footer.navmenu .list li img:after {
+    height: 0.7em;
+    content: url("../img/menu/down.png");
+}
+
+footer.navmenu .list li img.expanded {
+    content: url("../img/menu/up.png");
+}
+
+footer.navmenu .list li img.expanded:after {
+    content: url("../img/menu/up.png");
+}
+
+footer.navmenu .list li img {
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+footer.navmenu .list li img:after {
+    position: relative;
+    top: 8px;
+}
+
+footer.navmenu .list li:hover img,
+footer.navmenu .list li.expanded img {
+    content: url("../img/menu/down-white.png");
+}
+
+footer.navmenu .list li:hover img.expanded,
+footer.navmenu .list li.expanded img.expanded {
+    content: url("../img/menu/up-white.png");
+}
+
+footer.navmenu .list li:hover img:after,
+footer.navmenu .list li.expanded img:after {
+    content: url("../img/menu/down-white.png");
+}
+
+footer.navmenu .list li:hover img.expanded:after,
+footer.navmenu .list li.expanded img.expanded:after {
+    content: url("../img/menu/up-white.png");
+}
+
+footer.navmenu .list li a {
+    line-height: 2.7em;
+    height: 2em;
 }
 
 footer.navmenu .list .submenu {
     position: absolute;
     margin: 0 auto;
     width: 100%;
-    height: 500px;
+    height: 7em;
     left: 0;
     right: 0;
-    padding: 10px 0 0 0;
+    padding: 0;
     background-image: url("../img/menu/submenu.png");
     background-repeat: no-repeat;
+    background-size: 70% 100%;
     background-position: center 0;
 }
 
 footer.navmenu .list .submenu li {
-    font-size: 30px;
     color: #fff;
-    height: 75px;
-    line-height: 75px;
+    height: 1.6em;
+    line-height: 0.8em;
+    font-size: 1em;
     cursor: pointer;
+    display: block;
 }
 
-footer.navmenu .list .submenu li:hover:before {
+footer.navmenu .list .submenu li a {
+    color: white;
+    font-size: 0.8em;
+    line-height: 2em;
+}
+
+
+/*footer.navmenu .list .submenu li:hover:before {
     content: url("../img/menu/dot-white-left.png");
     margin-left: -70px;
     position: absolute;
@@ -266,23 +334,7 @@ footer.navmenu .list .submenu li:hover:after {
     margin-right: 20px;
     position: absolute;
 }
-
-footer.navmenu .list li img.expanded {
-    content: url("../img/menu/up.png");
-}
-
-footer.navmenu .list li img {
-    cursor: pointer;
-    margin-left: 10px;
-}
-
-footer.navmenu .list li:hover img {
-    content: url("../img/menu/down-white.png");
-}
-
-footer.navmenu .list li:hover img.expanded {
-    content: url("../img/menu/up-white.png");
-}
+*/
 
 @media screen and (max-height: 800px),
 screen and (max-width: 1120px) {
@@ -291,7 +343,7 @@ screen and (max-width: 1120px) {
     }
 }
 
-@media screen and (max-height: 560px),
+@media screen and (max-height: 650px),
 screen and (max-width: 720px) {
     body {
         font-size: 6px;
@@ -330,10 +382,13 @@ screen and (max-width: 720px) {
     .menu {
         height: 55px;
     }
-    .nav-button {
+    .nav-button,
+    .nav-button.active {
         display: none;
     }
-    .nav-button.mobile {
+    .nav-button.mobile,
+    .nav-button.active.mobile {
+        height: auto;
         display: block;
     }
     footer.navmenu {
