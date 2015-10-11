@@ -9,3 +9,5 @@ lib-cov
 
 bower_components
 node_modules
+
+psd/
