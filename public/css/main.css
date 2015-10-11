@@ -337,7 +337,14 @@ footer.navmenu .list .submenu li:hover:after {
 }
 */
 
-@media screen and (max-width: 1120px) {
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (max-width: 1200px),
+screen and (max-height: 800px) {
+    body {
+        font-size: 8px;
+    }
     .description {
         top: 0;
         left: 10px;
@@ -359,19 +366,23 @@ footer.navmenu .list .submenu li:hover:after {
     }
 }
 
-@media screen and (max-height: 800px),
-screen and (max-width: 1120px) {
-    body {
-        font-size: 8px;
-    }
-}
 
-@media screen and (max-height: 650px),
-screen and (max-width: 720px) {
+/* Medium Devices, Desktops */
+
+@media only screen and (max-width: 992px) {}
+
+
+/* Small Devices, Tablets */
+
+@media only screen and (max-width: 768px),
+screen and (max-height: 650px) {
     body {
         font-size: 6px;
     }
 }
+
+
+/* Extra Small Devices, Phones */
 
 @media screen and (max-width: 480px) {
     /*MENU*/
@@ -438,3 +449,8 @@ screen and (max-width: 720px) {
         display: block;
     }
 }
+
+
+/* Custom, iPhone Retina */
+
+@media only screen and (max-width: 320px) {}
