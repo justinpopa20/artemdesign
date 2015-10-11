@@ -187,6 +187,11 @@ footer.navmenu .cartoon {
     font-size: 0.8em;
 }
 
+.description .content .phonetic {
+    font-family: times;
+    margin-left: 20px;
+}
+
 .description .previous,
 .description .next {
     position: absolute;
