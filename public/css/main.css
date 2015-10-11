@@ -134,7 +134,7 @@ footer.navmenu .cartoon {
 
 .description {
     left: 13%;
-    right: 15%;
+    right: 20%;
     margin: 0 auto;
     height: 23%;
     font-family: CliveBarker;
@@ -337,6 +337,28 @@ footer.navmenu .list .submenu li:hover:after {
 }
 */
 
+@media screen and (max-width: 1120px) {
+    .description {
+        top: 0;
+        left: 10px;
+        right: 10px;
+        font-size: 22px;
+        height: 60px;
+        line-height: 100px;
+        z-index: 0;
+    }
+    .description .content {
+        padding: 0 20px;
+        line-height: 30px;
+        margin-top: 18px;
+    }
+    .description .previous,
+    .description .next {
+        top: 0;
+        height: 20px;
+    }
+}
+
 @media screen and (max-height: 800px),
 screen and (max-width: 1120px) {
     body {
@@ -408,25 +430,6 @@ screen and (max-width: 720px) {
     }
     footer.navmenu .logo-mobile {
         display: block;
-    }
-    .description {
-        top: 0;
-        left: 10px;
-        right: 10px;
-        font-size: 22px;
-        height: 60px;
-        line-height: 100px;
-        z-index: 0;
-    }
-    .description .content {
-        padding: 0 20px;
-        line-height: 30px;
-        margin-top: 18px;
-    }
-    .description .previous,
-    .description .next {
-        top: 0;
-        height: 20px;
     }
     .page-bg {
         display: none;
