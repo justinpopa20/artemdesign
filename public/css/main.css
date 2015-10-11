@@ -150,6 +150,7 @@ footer.navmenu .cartoon {
 .description .content div {
     /* height: 100%; */
     position: relative;
+    font-weight: 700;
 }
 
 .description .content div p {
@@ -159,6 +160,31 @@ footer.navmenu .cartoon {
     line-height: 1.3em;
     padding-top: 50px;
     width: 100%;
+}
+
+.description .content .quoteWeek {
+    line-height: 50px;
+    font-size: 0.8em;
+    padding-top: 45px;
+}
+
+.description .content .quoteWeek span {
+    font-size: 1em;
+    font-family: Nyala;
+}
+
+.description .content .quoteWeek p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.8em;
+}
+
+.description .content span.source {
+    font-family: Nyala;
+    margin-top: -17px;
+    display: block;
+    margin-left: 732px;
+    font-size: 0.8em;
 }
 
 .description .previous,
@@ -388,6 +414,19 @@ screen and (max-height: 800px) {
     .description .next {
         top: 25px;
         height: 20px;
+    }
+    /*Quote of the week styling*/
+    .description .content .quoteWeek {
+        line-height: 30px;
+        font-size: 0.8em;
+        padding-top: 0;
+    }
+    .description .content span.source {
+        font-family: Nyala;
+        margin-top: -13px;
+        display: block;
+        margin-left: 310px;
+        font-size: 0.8em;
     }
 }
 
