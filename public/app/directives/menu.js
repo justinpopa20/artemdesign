@@ -1,7 +1,7 @@
 angular.module("artemdesign").directive("footermenu", function() {
     return {
         templateUrl: 'app/directives/menu.tmpl.html',
-        link: function(scope, element) {
+        link: function() {
             //animate menu display
             $("footer .menu").on("mousedown", function(event) {
                 var footer = $("footer");
