@@ -50,7 +50,12 @@ img.page-bg-mobile {
 
 @font-face {
     font-family: CliveBarker;
-    src: url("http://artemdesign.com/CliveBarker.ttf");
+    src: url("../fonts/CliveBarker.ttf");
+}
+
+@font-face {
+    font-family: Nyala;
+    src: url("../fonts/Nyala.ttf");
 }
 
 
