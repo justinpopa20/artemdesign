@@ -1,12 +1,13 @@
 {
-  "name": "artemdesign.ro",
-  "version": "0.0.5",
-  "dependencies": {
-    "angular": "~1.4.7",
-    "bootstrap": "~3.3.5",
-    "jquery": "~2.1.4",
-    "angular-route": "~1.4.7",
-    "lodash": "~3.10.1",
-    "angular-animate": "~1.4.7"
-  }
+    "name": "artemdesign.ro",
+    "version": "0.0.5",
+    "dependencies": {
+        "angular": "~1.4.7",
+        "angular-route": "~1.4.7",
+        "angular-animate": "~1.4.7",
+        "bootstrap": "~3.3.5",
+        "jquery": "~2.1.4",
+        "lodash": "~3.10.1",
+        "slick-carousel": "*"
+    }
 }

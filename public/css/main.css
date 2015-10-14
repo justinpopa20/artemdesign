@@ -74,7 +74,7 @@ footer.navmenu {
 }
 
 footer.navmenu.active {
-    z-index: 3;
+    z-index: 5;
 }
 
 footer.navmenu .logo {
@@ -151,6 +151,21 @@ footer.navmenu .cartoon {
     z-index: 2;
 }
 
+.description .content,
+.description .content div {
+    /* height: 100%; */
+    position: relative;
+}
+
+.description .content div p {
+    left: 0;
+    display: inline-block;
+    padding: 0 40px;
+    line-height: 1.3em;
+    padding-top: 50px;
+    width: 100%;
+}
+
 .description .previous,
 .description .next {
     position: absolute;
@@ -159,6 +174,7 @@ footer.navmenu .cartoon {
     height: 23%;
     bottom: 0;
     cursor: pointer;
+    z-index: 4;
 }
 
 .description .previous {
@@ -350,6 +366,12 @@ screen and (max-height: 800px) {
     body {
         font-size: 8px;
     }
+}
+
+
+/* Medium Devices, Desktops */
+
+@media only screen and (max-width: 992px) {
     .description {
         top: 0;
         left: 10px;
@@ -361,20 +383,18 @@ screen and (max-height: 800px) {
     }
     .description .content {
         padding: 0 20px;
-        line-height: 30px;
-        margin-top: 18px;
+        /* line-height: 30px; */
+    }
+    .description .content div p {
+        padding: 0 40px;
+        line-height: normal;
     }
     .description .previous,
     .description .next {
-        top: 0;
+        top: 25px;
         height: 20px;
     }
 }
-
-
-/* Medium Devices, Desktops */
-
-@media only screen and (max-width: 992px) {}
 
 
 /* Small Devices, Tablets */
