@@ -8,18 +8,18 @@
             <p>Well, I might be just the thing for you!!</p>
         </div>
     </div>
-    <div class="row">
+    <div class="row actually-do">
         <div class="col-xs-12">
             <h1>What do I actually do?</h1>
         </div>
     </div>
     <div class="row categories">
-        <div class="col-xs-12 col-md-3 branding">
+        <div class="col-xs-12 col-sm-3 col-md-3 branding">
             <h1>
             	<a>Branding</a>
         	</h1>
         </div>
-        <div class="col-xs-12 col-md-3 illustrations">
+        <div class="col-xs-12 col-sm-3 col-md-3 illustrations">
             <h1>
             	<a>
 	            	<p>Illustrations, </p>
@@ -27,19 +27,19 @@
             	</a>
             </h1>
         </div>
-        <div class="col-xs-12 col-md-3 artwork">
+        <div class="col-xs-12 col-sm-3 col-md-3 artwork">
             <h1>
             	<a>Statement artwork</a>
         	</h1>
         </div>
-        <div class="col-xs-12 col-md-3 lifestyle">
+        <div class="col-xs-12 col-sm-3 col-md-3 lifestyle">
             <h1>
             	<a>Lifestyle design</a>
         	</h1>
         </div>
     </div>
     <div class="row details">
-        <div class="col-xs-12 col-md-6">
+        <div class="col-xs-12 col-sm-6 col-md-6 are-you ">
             <h1>
     			<a ng-click="showAreYou = !showAreYou; showSpecs = false;">
     				<span>Are you ... ?</span>
@@ -48,15 +48,7 @@
     			</a>    			
 			</h1>
         </div>
-        <div class="col-xs-12 are-you slideDown" ng-show="showAreYou">
-            <p>...a company looking for an original, out of the ordinary brand? ...or jtust some complementary materials to the one you already have?</p>
-            <p>...the passionate gift giver, choosing one of a kind products?</p>
-            <p>...in search of illustrating & visually organizing your portfolio, book, catalogue or any other content?</p>
-            <p>...an art collector with interest in making a statement? ...or just wanting ‘something else’?</p>
-            <p>...the person who likes to reflect it`s uniqueness in the world through wearable art?</p>
-            <p>If the answer to any of the above is yes, pick your areas of interest to explore...and don`t hesitate to contact me :)</p>
-        </div>
-        <div class="col-xs-12 col-md-6">
+        <div class="col-xs-12 col-sm-6 col-md-6 specs ">
             <h1>
     			<a ng-click="showSpecs = !showSpecs; showAreYou = false;">
     				<span>Specifications</span>
@@ -65,7 +57,15 @@
     			</a>  
 			</h1>
         </div>
-        <div class="col-xs-12 specs slideDown" ng-show="showSpecs">
+        <div class="col-xs-12 are-you-description slideDown" ng-show="showAreYou">
+            <p>...a company looking for an original, out of the ordinary brand? ...or jtust some complementary materials to the one you already have?</p>
+            <p>...the passionate gift giver, choosing one of a kind products?</p>
+            <p>...in search of illustrating & visually organizing your portfolio, book, catalogue or any other content?</p>
+            <p>...an art collector with interest in making a statement? ...or just wanting ‘something else’?</p>
+            <p>...the person who likes to reflect it`s uniqueness in the world through wearable art?</p>
+            <p>If the answer to any of the above is yes, pick your areas of interest to explore  ...and don`t hesitate to contact me :)</p>
+        </div>
+        <div class="col-xs-12 specs-description slideDown" ng-show="showSpecs">
             <p>Everything I create is considered an art object and it is to be treated as such</p>
             <p>I don`t do “copy this” type of projects</p>
             <p>I have the right to choose my projects, so usually the most artistically challenging ones prevail</p>
