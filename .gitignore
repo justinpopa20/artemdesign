@@ -6,6 +6,7 @@ lib-cov
 *.out
 *.pid
 *.gz
+*.orig
 
 bower_components
 node_modules

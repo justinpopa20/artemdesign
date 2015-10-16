@@ -2,7 +2,7 @@
 
     'use strict';
 
-    angular.module('artemdesign', ['ngRoute'])
+    angular.module('artemdesign', ['ngRoute', 'ngAnimate'])
         .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
             $locationProvider.html5Mode({
                 enabled: true,
@@ -14,6 +14,9 @@
                 })
                 .when('/manifesto', {
                     templateUrl: 'app/pages/manifesto.tmpl.html'
+                })
+                .when('/help-you', {
+                    templateUrl: 'app/pages/help-you.tmpl.html'
                 })
                 .when('/contact', {
                     templateUrl: 'app/pages/contact.tmpl.html'
