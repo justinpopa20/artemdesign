@@ -20,6 +20,8 @@ body {
     background-color: rgba(0, 0, 0, 0.37);
     margin: 0;
     font-size: 10px;
+    font-family: Nyala;
+    color: black;
 }
 
 
@@ -50,7 +52,7 @@ img.page-bg-mobile {
 
 @font-face {
     font-family: CliveBarker;
-    src: url("http://artemdesign.com/CliveBarker.ttf");
+    src: url("../fonts/CliveBarker.ttf");
 }
 
 
@@ -371,6 +373,76 @@ footer.navmenu .list .submenu li a {
 }
 
 
+/*JOIN ME newsletter*/
+
+.subscribe {
+    font-size: 4em;
+    bottom: 23%;
+    position: absolute;
+    color: #fff;
+    left: 9%;
+    cursor: pointer;
+}
+
+.subscribe span {
+    font-family: CliveBarker;
+}
+
+.subscribe .arrow-right {
+    background-image: url("../img/pages/home/right_arrow.png");
+    width: 0.8em;
+    height: 0.8em;
+    display: inline-block;
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: contain;
+    top: 3px;
+}
+
+
+/*HELP you home link*/
+
+.help-you {
+    bottom: 23%;
+    right: 18%;
+    position: absolute;
+    font-size: 4em;
+    font-weight: bold;
+    background-image: url("../img/pages/home/gri.png");
+    height: 4.7em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 5.2em;
+    cursor: pointer;
+}
+
+.help-you:hover {
+    background-image: url("../img/pages/home/roz.png");
+}
+
+.help-you p {
+    margin: 0;
+    line-height: 1.7em;
+}
+
+.help-you p:first-child {
+    margin-top: 18px;
+}
+
+.help-you strong {
+    font-size: 2.4em;
+    line-height: 0.4em;
+}
+
+.help-you .stretch {
+    letter-spacing: 1.15em;
+    padding-left: 5px;
+    font-size: 1.2em;
+    line-height: 0.1;
+}
+
+
 /*footer.navmenu .list .submenu li:hover:before {
     content: url("../img/menu/dot-white-left.png");
     margin-left: -70px;
@@ -511,6 +583,13 @@ screen and (max-height: 650px) {
     }
     .page-bg-mobile {
         display: block;
+    }
+    /*HOME*/
+    .subscribe {
+        bottom: 110px;
+    }
+    .help-you p:first-child {
+        margin-top: 12px;
     }
 }
 
