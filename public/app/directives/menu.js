@@ -3,48 +3,57 @@ angular.module("artemdesign").directive("footermenu", function() {
         templateUrl: 'app/directives/menu.tmpl.html',
         link: function() {
             //animate menu display
-            $("footer .nav-button").on("mousedown", function(event) {
-                var footer = $("footer");
-                var newHeight = $(window).height();
-                if (footer.hasClass("active")) {
-                    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                        newHeight = 110;
-                    } else {
-                        newHeight = 244;
-                    }
-                }
+            // $(".nav-button").on("mousedown", function(event) {
+            //     var footer = $("footer");
+            //     var list = $(".list");
+            //     if (footer.hasClass("active")) {
+            //         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            //             newHeight = 110;
+            //         } else {
+            //             newHeight = 244;
+            //         }
+            //     }
 
-                var list = footer.find(".list");
-                var description = footer.find(".description");
-                list.removeClass("hidden");
-                description.addClass("hidden");
-                footer.addClass("animating");
+            //     var newHeight = $(window).height();
+            //     if (!list.hasClass("active")) {
+            //         newHeight = 0;
+            //     }
 
-                footer.animate({
-                        height: newHeight
-                    }, // what we are animating
-                    'fast', // how fast we are animating
-                    'swing', // the type of easing
-                    function() { // the callback
-                        footer.removeClass("animating");
-                        if (footer.hasClass("active")) {
-                            list.addClass("hidden");
-                            footer.removeClass("active");
-                            description.removeClass("hidden");
-                            footer.height("23%");
-                        } else {
-                            footer.addClass("active");
-                            footer.height("100%");
-                        }
-                    });
-            });
+            //     var description = footer.find(".description");
+            //     // list.removeClass("hidden");
+            //     description.addClass("hidden");
+            //     footer.addClass("animating");
 
-            //open submenu
-            $(".subMenuToggle a").on("mousedown", function(event) {
-                var footer = $("footer");
-                footer.find("ul.list .submenu").toggleClass("hidden");
-                $(".subMenuToggle").toggleClass("expanded");
-            });
+            //     list.css({
+            //         top: newHeight
+            //     });
+
+            //     list.animate({
+            //             top: newHeight
+            //         }, // what we are animating
+            //         'fast', // how fast we are animating
+            //         'swing', // the type of easing
+            //         function() { // the callback
+            //             footer.removeClass("animating");
+            //             if (list.hasClass("active")) {
+            //                 // list.addClass("hidden");
+            //                 list.removeClass("active");
+            //                 description.removeClass("hidden");
+            //                 // footer.height("23%");
+            //             } else {
+            //                 list.addClass("active");
+            //                 // footer.height("100%");
+            //             }
+            //         });
+            // });
+
+            // //open submenu
+            // $(".subMenuToggle a").on("mousedown", function(event) {
+            //     var footer = $("footer");
+            //     footer.find("ul.list .submenu").toggleClass("hidden");
+            //     $(".subMenuToggle").toggleClass("expanded");
+            // });
+
         }
     }
 });

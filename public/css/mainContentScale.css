@@ -1,0 +1,306 @@
+a,
+a:hover,
+a:focus {
+    text-decoration: none;
+    color: black;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+html,
+body {
+    height: 100%;
+    /*overflow: hidden;*/
+}
+
+body {
+    background-color: rgb(214, 214, 214);
+    margin: 0;
+    font-size: 10px;
+    font-family: Nyala;
+    color: black;
+}
+
+
+/* PAGES BG*/
+
+.mainView {
+    height: 100%;
+}
+
+.page-bg.home {
+    display: block;
+    height: 100%;
+    background-image: url("../img/pages/home/home.jpg");
+    background-repeat: no-repeat;
+}
+
+div.contentScale {
+    min-height: 80%;
+}
+
+
+/*Fonts*/
+
+@font-face {
+    font-family: CliveBarker;
+    src: url("../fonts/CliveBarker.ttf");
+}
+
+@font-face {
+    font-family: Nyala;
+    src: url("../fonts/Nyala.ttf");
+}
+
+.description {
+    left: 13%;
+    right: 20%;
+    margin: 0 auto;
+    height: 23%;
+    font-family: CliveBarker;
+    line-height: 32vh;
+    text-align: center;
+    font-size: 5em;
+    position: fixed;
+    bottom: 0;
+    z-index: 9;
+}
+
+.description .content,
+.description .content div {
+    /* height: 100%; */
+    position: relative;
+    color: black;
+}
+
+.description .content div p {
+    left: 0;
+    display: inline-block;
+    padding: 0 40px;
+    line-height: 1.3em;
+    padding-top: 50px;
+    width: 100%;
+}
+
+.description .content .quoteWeek {
+    line-height: 50px;
+    font-size: 0.8em;
+    padding-top: 45px;
+}
+
+.description .content .quoteWeek span {
+    font-size: 1em;
+    font-family: Nyala;
+}
+
+.description .content .quoteWeek p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.8em;
+}
+
+.description .content span.source {
+    font-family: Nyala;
+    margin-top: -17px;
+    display: block;
+    margin-left: 732px;
+    font-size: 0.8em;
+}
+
+.description .content .phonetic {
+    font-family: times;
+    margin-left: 20px;
+}
+
+.description .previous,
+.description .next {
+    position: absolute;
+    margin: auto 0;
+    top: 32%;
+    height: 23%;
+    bottom: 0;
+    cursor: pointer;
+    z-index: 4;
+}
+
+.description .previous {
+    left: 0;
+}
+
+.description .next {
+    right: 0;
+}
+
+
+/*JOIN ME newsletter*/
+
+.subscribe {
+    font-size: 4em;
+    bottom: 20%;
+    position: absolute;
+    color: #fff;
+    left: 9%;
+    cursor: pointer;
+}
+
+.subscribe span {
+    font-family: CliveBarker;
+}
+
+.subscribe .arrow-right {
+    background-image: url("../img/pages/home/right_arrow.png");
+    width: 0.8em;
+    height: 0.8em;
+    display: inline-block;
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: contain;
+    top: 3px;
+}
+
+
+/*HELP you home link*/
+
+.help-you-link {
+    bottom: 20%;
+    right: 20%;
+    position: absolute;
+    font-size: 4em;
+    font-weight: bold;
+    background-image: url("../img/pages/home/gri.png");
+    height: 4.7em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 5.2em;
+    cursor: pointer;
+}
+
+.help-you-link:hover {
+    background-image: url("../img/pages/home/roz.png");
+}
+
+.help-you-link p {
+    margin: 0;
+    line-height: 1.7em;
+}
+
+.help-you-link p:first-child {
+    margin-top: 18px;
+}
+
+.help-you-link strong {
+    font-size: 2.4em;
+    line-height: 0.4em;
+}
+
+.help-you-link .stretch {
+    letter-spacing: 1.15em;
+    padding-left: 5px;
+    font-size: 1.2em;
+    line-height: 0.1;
+}
+
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (max-width: 1200px),
+screen and (max-height: 800px) {
+    body {
+        font-size: 8px;
+    }
+}
+
+
+/* Medium Devices, Desktops */
+
+@media only screen and (max-width: 992px) {
+    .description {
+        top: 0;
+        left: 10px;
+        right: 10px;
+        font-size: 22px;
+        height: 60px;
+        line-height: 100px;
+        z-index: 0;
+    }
+    .description .content {
+        padding: 0 20px;
+        /* line-height: 30px; */
+    }
+    .description .content div p {
+        padding: 0 40px;
+        line-height: normal;
+    }
+    .description .previous,
+    .description .next {
+        top: 25px;
+        height: 20px;
+    }
+    /*Quote of the week styling*/
+    .description .content .quoteWeek {
+        line-height: 30px;
+        font-size: 0.8em;
+        padding-top: 0;
+    }
+    .description .content span.source {
+        font-family: Nyala;
+        margin-top: -13px;
+        display: block;
+        margin-left: 310px;
+        font-size: 0.8em;
+    }
+}
+
+
+/* Small Devices, Tablets */
+
+@media only screen and (max-width: 768px),
+screen and (max-height: 650px) {
+    body {
+        font-size: 6px;
+    }
+}
+
+
+/* Extra Small Devices, Phones */
+
+@media screen and (max-width: 480px) {
+    /*PAGES*/
+    .page-bg.home {
+        background-image: url("../img/pages/home/home_phone.jpg");
+        background-size: 100% 100%;
+    }
+    /*HOME*/
+    .subscribe {
+        font-size: 3em;
+    }
+    .help-you-link p:first-child {
+        margin-top: 12px;
+    }
+    .help-you-link {
+        bottom: 30%;
+    }
+    .help-you-link .stretch {
+        font-size: 1.1em;
+    }
+}
+
+
+/* Custom, iPhone Retina */
+
+@media only screen and (max-width: 320px) {}
+
+.slideUp {
+    transition: .3s linear all;
+    top: 0;
+    overflow: hidden;
+}
+
+.slideUp.ng-hide {
+    top: 100%;
+    overflow: hidden;
+}

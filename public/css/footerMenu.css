@@ -1,0 +1,327 @@
+/*MENU*/
+
+footer.navmenu {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    height: 20%;
+    width: 100%;
+    background-image: url("../img/menu/whitebg.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+}
+
+footer.navmenu.active {
+    z-index: 5;
+}
+
+footer.navmenu .logo {
+    height: 20vh;
+    float: left;
+    position: relative;
+    z-index: 11;
+}
+
+footer.navmenu .logo-mobile {
+    /*position: absolute;*/
+    float: left;
+    bottom: 0;
+    z-index: 3;
+    display: none;
+    z-index: 11;
+}
+
+footer.navmenu .logo a {
+    height: 220px;
+    margin-top: 20px;
+    display: block;
+}
+
+footer.navmenu .cartoon {
+    position: relative;
+    float: right;
+    height: 30vh;
+    z-index: 11;
+    right: 20px;
+    margin-top: -10vh;
+}
+
+.cartoon-mobile {
+    /*position: fixed;*/
+    float: right;
+    bottom: 0;
+    right: 10px;
+    z-index: 3;
+    display: none;
+    z-index: 11;
+}
+
+.nav-button {
+    bottom: 0;
+    right: 10px;
+    z-index: 4;
+    height: 7vh;
+    float: right;
+    z-index: 12;
+    position: absolute;
+}
+
+.nav-button.active {
+    top: 20px;
+    right: 10px;
+    z-index: 4;
+    height: 7vh;
+    position: absolute;
+    z-index: 11;
+}
+
+.nav-button.mobile,
+.nav-button.active.mobile {
+    height: auto;
+    display: none;
+}
+
+.list .menu {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+}
+
+
+/* hide menu button when footer is expanded*/
+
+footer.navmenu.animating > .nav-button,
+footer.navmenu.active > .nav-button {
+    display: none;
+}
+
+.list {
+    z-index: 10;
+    list-style: none;
+    font-family: CliveBarker;
+    font-size: 5em;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    position: fixed;
+    background-image: url("../img/menu/bg_full.png");
+    margin: 0;
+    padding: 0;
+    padding-top: 65px;
+    text-align: center;
+}
+
+.list > li {
+    height: 2.4em;
+    line-height: 2em;
+    width: 100%;
+    display: inline-block;
+}
+
+.list li:hover:before {
+    content: url("../img/menu/dot-left.png");
+    margin-right: 5%;
+    position: relative;
+}
+
+.list li:hover:after {
+    content: url("../img/menu/dot-right.png");
+    margin-left: 5%;
+    position: relative;
+}
+
+.list li:active:before,
+.list .submenu li:hover:before,
+.list li.expanded:before {
+    content: url("../img/menu/dot-white-left.png");
+    margin-right: 5%;
+    position: relative;
+}
+
+.list li:active:after,
+.list .submenu li:hover:after,
+.list li.expanded:after {
+    content: url("../img/menu/dot-white-right.png");
+    margin-left: 5%;
+    position: relative;
+}
+
+.list > li:active,
+.list li.expanded {
+    background-image: url("../img/menu/menu_pink.png");
+    background-repeat: no-repeat;
+    background-size: 70% 130%;
+    background-position: center;
+}
+
+.list li:active a,
+.list li.expanded a {
+    color: white;
+}
+
+.list li img {
+    height: 0.7em;
+    content: url("../img/menu/down.png");
+}
+
+.list li img:after {
+    height: 0.7em;
+    content: url("../img/menu/down.png");
+}
+
+.list li img.expanded {
+    content: url("../img/menu/up.png");
+}
+
+.list li img.expanded:after {
+    content: url("../img/menu/up.png");
+}
+
+.list li img {
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.list li img:after {
+    position: relative;
+    top: 8px;
+}
+
+.list li:hover img,
+.list li.expanded img {
+    content: url("../img/menu/down-white.png");
+}
+
+.list li:hover img.expanded,
+.list li.expanded img.expanded {
+    content: url("../img/menu/up-white.png");
+}
+
+.list li:hover img:after,
+.list li.expanded img:after {
+    content: url("../img/menu/down-white.png");
+}
+
+.list li:hover img.expanded:after,
+.list li.expanded img.expanded:after {
+    content: url("../img/menu/up-white.png");
+}
+
+.list li a {
+    line-height: 2.7em;
+    height: 2em;
+}
+
+.list .submenu {
+    position: absolute;
+    margin: 0 auto;
+    width: 100%;
+    height: 7em;
+    left: 0;
+    right: 0;
+    padding: 0;
+    background-image: url("../img/menu/submenu.png");
+    background-repeat: no-repeat;
+    background-size: 70% 100%;
+    background-position: center 0;
+}
+
+.list .submenu li {
+    color: #fff;
+    height: 1.6em;
+    line-height: 0.8em;
+    font-size: 1em;
+    cursor: pointer;
+    display: block;
+}
+
+.list .submenu li a {
+    color: white;
+    font-size: 0.8em;
+    line-height: 2em;
+}
+
+
+/* Extra Small Devices, Phones */
+
+@media screen and (max-width: 480px) {
+    /*MENU*/
+    footer.navmenu .logo {
+        height: 18vh;
+        top: 10px;
+    }
+    .list {
+        font-size: 3em;
+    }
+    /*.list > li {
+        line-height: 35px;
+        height: 40px;
+        font-size: 20px;
+    }
+    .list li img {
+        height: 16px;
+    }
+    .list .submenu {
+        background-image: url("../img/menu/submenu_selected_mobile.png");
+        height: 170px;
+        padding: 20px 0 0 0;
+    }
+    .list .submenu li {
+        height: 35px;
+        line-height: 20px;
+        font-size: 16px;
+    }
+    .list > li:active:before {
+        content: url("../img/menu/dot-left_mobile.png");
+    }
+    .list > li:active:after {
+        content: url("../img/menu/dot-right_mobile.png");
+    }
+    footer.navmenu .logo {
+        content: url("../img/menu/logo_mobile.png");
+    }
+    .menu {
+        height: 55px;
+    }
+    .nav-button,
+    .nav-button.active {
+        display: none;
+    }
+    .nav-button.mobile,
+    .nav-button.active.mobile {
+        height: auto;
+        display: block;
+    }
+    footer.navmenu {
+        height: 110px;
+        background-image: url("../img/menu/bg_pattern_mobile.png");
+        background-size: cover;
+    }
+    footer.navmenu .cartoon {
+        display: none;
+    }
+    footer.navmenu .cartoon-mobile {
+        display: block;
+    }
+    
+    footer.navmenu .logo-mobile {
+        display: block;
+    }*/
+}
+
+
+/* Custom, iPhone Retina */
+
+@media only screen and (max-width: 320px) {}
+
+.slideUp {
+    transition: .3s linear all;
+    top: 0;
+    overflow: hidden;
+}
+
+.slideUp.ng-hide {
+    top: 100%;
+    overflow: hidden;
+}

@@ -1,29 +1,28 @@
-<quoteslider></quoteslider>
+<ul ng-show="showOverlay" class="list slideUp">
+    <img class="nav-button active" ng-click="showOverlay=!showOverlay" src="img/menu/button_active.png">
+    <img class="nav-button active mobile" src="img/menu/button_active_mobile.png">
+    <li><a href="/">My comfy home</a></li>
+    <li><a href="/manifesto">Manifesto</a></li>
+    <li><a href="/help-you">How can I help you?</a></li>
+    <li class="subMenuToggle collapsible"><a href>How do I art'em?</a></li>
+    <ul class="submenu hidden">
+        <li><a href="/help-you/branding">Branding</a></li>
+        <li><a href="/help-you/imaging">Illustrations, imag
+ery and layout</a></li>
+        <li><a href="/help-you/photography">Statement artwork</a></li>
+        <li><a href="/help-you/real-life-design">Lifestyle design</a></li>
+    </ul>
+    <li><a href="/inspiration">Everyday inspiration</a></li>
+    <li><a href="/contact">Wanna get in touch with me?</a></li>
+</ul>
 <footer class="navmenu">
     <div>
         <img class="logo" src="img/menu/logo_big.png">
         <img class="logo-mobile" src="img/menu/logo_mobile.png">
         <a href="/"></a>
     </div>
-    <ul class="list hidden">
-        <img class="nav-button active" src="img/menu/button_active.png">
-        <img class="nav-button active mobile" src="img/menu/button_active_mobile.png">
-        <li><a href="/">My comfy home</a></li>
-        <li><a href="/manifesto">Manifesto</a></li>
-        <li><a href="/help-you">How can I help you?</a></li>
-        <li class="subMenuToggle collapsible"><a href>How do I art'em?</a></li>
-        <ul class="submenu hidden">
-            <li><a href="/help-you/branding">Branding</a></li>
-            <li><a href="/help-you/imaging">Illustrations, imag
-ery and layout</a></li>
-            <li><a href="/help-you/photography">Statement artwork</a></li>
-            <li><a href="/help-you/real-life-design">Lifestyle design</a></li>
-        </ul>
-        <li><a href="/inspiration">Everyday inspiration</a></li>
-        <li><a href="/contact">Wanna get in touch with me?</a></li>
-    </ul>
+    <img class="nav-button" ng-hide="showOverlay" ng-click="showOverlay=!showOverlay" src="img/menu/button.png">
+    <img class="nav-button mobile" src="img/menu/button_mobile.png">
     <img class="cartoon" src="img/menu/cartoon.png">
     <img class="cartoon-mobile" src="img/menu/cartoon_mobile.png">
-    <img class="nav-button" src="img/menu/button.png">
-    <img class="nav-button mobile" src="img/menu/button_mobile.png">
 </footer>
