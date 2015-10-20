@@ -117,6 +117,13 @@ div.contentScale {
     margin-bottom: 50px;
 }
 
+.page-bg.manifesto .subscribe {
+    right: 13%;
+    left: auto;
+    color: black;
+    font-size: 4em;
+}
+
 
 /*Fonts*/
 
@@ -226,7 +233,6 @@ div.contentScale {
 }
 
 .subscribe .arrow-right {
-    background-image: url("../img/pages/home/right_arrow.png");
     width: 0.8em;
     height: 0.8em;
     display: inline-block;
@@ -234,6 +240,14 @@ div.contentScale {
     position: relative;
     background-size: contain;
     top: 3px;
+}
+
+.subscribe .arrow-right {
+    background-image: url("../img/menu/right.png");
+}
+
+.subscribe .arrow-right.white {
+    background-image: url("../img/pages/home/right_arrow.png");
 }
 
 
@@ -352,6 +366,17 @@ screen and (max-height: 800px) {
         display: block;
         margin-left: 310px;
         font-size: 0.8em;
+    }
+    /*MANIFESTO*/
+    .page-bg.manifesto .contentScale {
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 50px;
+    }
+    .page-bg.manifesto .subscribe {
+        position: relative;
+        right: 6%;
+        top: 5vh;
     }
 }
 
